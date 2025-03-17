@@ -7,6 +7,14 @@ requires-python = ">=3.10"
 dependencies = [
     "dotenv>=0.9.9",
     "googlemaps>=4.10.0",
+    "instapy>=0.6.16",
     "ollama>=0.4.7",
     "pandas>=2.2.3",
 ]
+
+[build-system]
+requires = ["setuptools>=76.0.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["webscrapping"]

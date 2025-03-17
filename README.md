@@ -1,6 +1,14 @@
 # Web scrapping
 
 
+## Installation
+
+In a virtual environment (not mandatory but recommended), install the required packages:
+```bash
+pip install -e .
+```
+
+
 ## Processing État de Vaud's "Registre du commerce"
 
 Script: `./webscrapping/process/vd.py`

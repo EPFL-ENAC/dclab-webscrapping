@@ -5,6 +5,8 @@
 
 In a virtual environment (not mandatory but recommended), install the required packages:
 ```bash
+git clone https://github.com/EPFL-ENAC/dclab-webscrapping.git
+cd dclab-webscrapping
 pip install -e .
 ```
 

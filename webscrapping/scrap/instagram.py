@@ -21,7 +21,13 @@ client.login(INSTAGRAM_USERNAME, INSTAGRAM_PASSWORD)
 print("Logged!")
 
 
-def find_users(client: Client, base_hashtag: str, search_hashtags: list[str], search_texts: list[str], amount: int = 10) -> set[str]:
+def find_users(
+    client: Client,
+    base_hashtag: str,
+    search_hashtags: list[str],
+    search_texts: list[str],
+    amount: int = 10,
+) -> set[str]:
     posts = client.hashtag_medias_top(base_hashtag, amount)
     hashtags_and_texts = [f"#{hashtag}" for hashtag in search_hashtags] + search_texts
     usernames = set()
@@ -38,7 +44,9 @@ def find_users(client: Client, base_hashtag: str, search_hashtags: list[str], se
     return usernames
 
 
-matching_users = find_users(client, BASE_HASHTAG, SEARCH_HASHTAGS, SEARCH_TEXTS, MAX_POSTS)
+matching_users = find_users(
+    client, BASE_HASHTAG, SEARCH_HASHTAGS, SEARCH_TEXTS, MAX_POSTS
+)
 
 print("\nMatching users:")
 print(matching_users)
